@@ -221,10 +221,10 @@ class View extends InputAdapter {
 
         batch.begin();
         // Draw enemies.
-//        for (Enemy enemy : model.enemies) {
-//            enemy.view.skeleton.getColor().a = Math.min(1, enemy.deathTimer / Enemy.fadeTime);
-//            skeletonRenderer.draw(batch, enemy.view.skeleton);
-//        }
+        for (Enemy enemy : model.enemies) {
+            enemy.view.skeleton.getColor().a = Math.min(1, enemy.deathTimer / Enemy.fadeTime);
+            skeletonRenderer.draw(batch, enemy.view.skeleton);
+        }
         // Draw player.
         if (player.collisionTimer < 0 || (int) (player.collisionTimer / flashTime) % 3 != 0)
             skeletonRenderer.draw(batch, player.view.skeleton);

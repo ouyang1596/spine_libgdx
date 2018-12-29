@@ -53,6 +53,7 @@ public class SuperSpineboy extends ApplicationAdapter {
 
     public void render() {
         float delta = Math.min(Gdx.graphics.getDeltaTime(), 1 / 30f) * model.getTimeScale();
+//        float delta = 0.01f;
         if (delta > 0) {
             model.update(delta);
             view.update(delta);
